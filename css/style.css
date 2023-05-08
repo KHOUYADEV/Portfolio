@@ -49,6 +49,9 @@ p{
 span{
     color: var(--primarycolor);
 }
+/*-----------------------------------------------
+------------------Home section
+-----------------------------------------------*/
 .home{
     width: 100%;
     height: 100vh;
@@ -136,7 +139,9 @@ nav ul li a:hover{
 .home .container-images:hover .pic{
     left: 45%;
 }
-
+/*-----------------------------------------------
+------------------About section
+-----------------------------------------------*/
 .about{
     background-color: var(--bgcolor-2);
     padding-left: var(--padding);
@@ -181,6 +186,9 @@ nav ul li a:hover{
     margin: 2rem;
     text-align: center;
 }
+/*-----------------------------------------------
+------------------skils section
+-----------------------------------------------*/
 .skkils{
     background-color: var(--bgcolor-2);
     padding:2rem var(--padding);
@@ -216,6 +224,9 @@ nav ul li a:hover{
 .skkil img{
     width: 75%;
 }
+/*-----------------------------------------------
+------------------Footer
+-----------------------------------------------*/
 footer{
     background-color: var(--bgcolor-1);
     padding: 2rem var(--padding);
@@ -236,4 +247,95 @@ footer{
     color: var(--primarycolor);
     text-align: center;
     margin-top: 1rem;
+}
+
+#menu.is-active span:nth-child(1){
+    transform: translate(0px, -2px) rotate(45deg);
+}
+#menu.is-active span:nth-child(2){
+    opacity: 0;
+    transform: translateX(15px);
+}
+#menu.is-active span:nth-child(3){
+    transform: translate(-3px, 3px) rotate(-45deg);
+}
+#menu.is-active span{
+    background-color: var(--primarycolor);
+}
+/*-----------------------------------------------
+------------------Humberger Menu
+-----------------------------------------------*/
+#menu{
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+#menu span{
+    display: none;
+    width: 30px;
+    height: 3px;
+    background-color: var(--lightcolor);
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    margin-bottom: 5px;
+}
+/*-----------------------------------------------
+------------------MEDIA Queries
+-----------------------------------------------*/
+@media screen and (max-width: 575px){
+:root{
+    --padding: 1.5rem;
+}
+
+html{
+    font-size: 13px;;
+}
+.home .container-images{
+    display: none;
+}
+nav >a{
+    display: none;
+}
+ul{
+    display: none;
+}
+nav{
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 82px;
+    padding-top: 0;
+    position: fixed;
+    background-color: var(--bgcolor-2);
+    border-bottom: 1px solid var(--secondarycolor);
+    z-index: 100;
+}
+nav ul{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bgcolor-2);
+}
+nav ul.is-active{
+    display: block;
+}
+nav ul li{
+    display: block;
+    text-align: center;
+    margin: 50px;
+}
+#menu span{
+    display: block;
+}
+.container-texts{
+    bottom: 0em;
+}
 }
